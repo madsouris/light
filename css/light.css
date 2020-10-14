@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 
 :root {
   --lgt-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -53,8 +53,14 @@ option,
 table,
 section,
 main,
-textarea {
+textarea,
+hr {
   margin-bottom: var(--margin-bottom);
+}
+
+code,
+pre {
+  font-family: var(--lgt-mono);
 }
 
 h1,
@@ -105,6 +111,141 @@ h6 {
   font-size: 1.1em;
 }
 
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+hr {
+  width: 100%;
+  color: var(--border-color);
+  opacity: 0.5;
+  margin-top: 1em;
+}
+
+pre {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 1em;
+  border-top: 1em solid var(--border-color);
+  background: var(--second-background-color);
+  color: var(--text-color);
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+code {
+  background: var(--second-background-color);
+  padding: 0 0.5em;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+button,
+a.button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background: transparent;
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 0 16px;
+  border: 0.5px solid var(--border-color);
+  border-radius: var(--round-corner);
+  white-space: nowrap;
+  height: 36px;
+  line-height: 36px;
+  font-size: 1em;
+  text-decoration: none;
+  letter-spacing: 0.1px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+button:hover,
+a.button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  background: var(--second-background-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:active,
+button:focus,
+a.button:active,
+a.button:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="button"]:active,
+input[type="button"]:focus {
+  outline: none;
+}
+
+.primary-button {
+  background: var(--primary-color);
+  color: var(--background-color);
+  border: 0.5px solid transparent;
+  font-weight: 600;
+  padding: 0 16px;
+  border-radius: var(--round-corner);
+  white-space: nowrap;
+  height: 36px;
+  line-height: 35px;
+  font-size: 1em;
+  text-decoration: none;
+  letter-spacing: 0.1px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.primary-button:hover {
+  background: var(--primary-color);
+  filter: grayscale(15%);
+  text-decoration: none;
+}
+
+.primary-button[disabled],
+.primary-button[disabled]:hover {
+  background: var(--primary-color);
+  color: var(--border-color);
+  filter: grayscale(90%);
+}
+
+button[disabled],
+a.button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+  color: var(--second-text-color);
+}
+
+button[disabled]:hover,
+a.button[disabled]:hover,
+input[type="submit"][disabled]:hover,
+input[type="reset"][disabled]:hover,
+input[type="button"][disabled]:hover {
+  color: var(--second-text-color);
+  background: transparent;
+  cursor: default;
+}
+
 /*
     Utilities for marking up page
 */
@@ -113,6 +254,12 @@ h6 {
   margin: 0 auto;
   margin-bottom: 1em;
   padding: 1em;
+  box-sizing: border-box;
+}
+
+.full {
+  display: block;
+  width: 100%;
   box-sizing: border-box;
 }
 
