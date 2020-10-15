@@ -6,7 +6,7 @@
   --lgt-mono: monospace;
   --primary-color: #0077ec;
   --text-color: #000000;
-  --second-text-color: #777777;
+  --second-text-color: #555555;
   --background-color: #ffffff;
   --second-background-color: #f8f8f8;
   --border-color: #bdbdbd;
@@ -154,6 +154,94 @@ code {
   color: var(--text-color);
 }
 
+details > summary {
+  color: var(--text-color);
+  cursor: pointer;
+  outline: none;
+}
+
+ol,
+ul {
+  margin-left: 0;
+}
+
+img,
+video {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+embed,
+iframe {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  font-weight: 400;
+  color: var(--second-text-color);
+  text-align: left;
+}
+
+td {
+  color: var(--text-color);
+}
+
+tr:hover {
+  background: var(--second-background-color);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+input[type="password"],
+input[type="search"],
+input[type="url"] {
+  font-weight: 400;
+  border-radius: var(--round-corner);
+  height: 34px;
+  line-height: 34px;
+  font-size: 1em;
+  color: var(--text-color);
+  border: 0.5px solid var(--border-color);
+  padding: 0 10px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  border: 0.5px solid var(--primary-color);
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: var(--text-color);
+  border: 0.5px solid var(--border-color);
+  padding: 10px;
+  outline: none;
+  font-weight: 400;
+  border-radius: var(--round-corner);
+}
+
 button,
 a.button,
 input[type="submit"],
@@ -167,7 +255,7 @@ input[type="reset"] {
   border-radius: var(--round-corner);
   white-space: nowrap;
   height: 36px;
-  line-height: 36px;
+  line-height: 35px;
   font-size: 1em;
   text-decoration: none;
   letter-spacing: 0.1px;
@@ -244,6 +332,14 @@ input[type="button"][disabled]:hover {
   color: var(--second-text-color);
   background: transparent;
   cursor: default;
+}
+
+footer {
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding-top: 1em;
 }
 
 /*
