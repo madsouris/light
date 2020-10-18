@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LightCSS Demo</title>
-    <link rel="stylesheet" href="css/light.css">
+    <link rel="stylesheet" href="Assets/light.css">
     <link rel="shortcut icon" href="img/lightCSS.svg" type="image/x-icon">
     <meta name="description" content="Simple and modern CSS framework for creating a beautiful website">
     <meta name="keywords" content="css,framework,simple framework,lightcss">
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a href="index.html">
-                <h4>
-                    LightCSS
-                </h4>
-            </a>
-        </nav>
+        <header>
+            <nav>
+                <a href="index.html">
+                    <h4>
+                        LightCSS
+                    </h4>
+                </a>
+            </nav>
+        </header>
         <h1>
             Overview
         </h1>
         <p>
-            Contents below is only using style from lightCSS. So you get the idea of what lightCSS is capable of. I tried to keep things simple, in term of look.
+            Contents below is only using style from lightCSS. So you get the idea of what lightCSS is capable of. I tried to keep things simple, in term of look and usage.
+        </p>
+        <p>
+            Most of the time you don't need to call any classes.
         </p>
         <hr>
         <h2>
@@ -32,25 +37,39 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta earum libero harum ullam omnis inventore sunt
             assumenda expedita <a href="#">Modfaka</a> tempora! Voluptate voluptatem repellendus exercitationem voluptas quae ab facilis, magni culpa?
         </p>
-        <h5>Lorem</h5>
-        <h4>Lorem</h4>
-        <h3>Lorem</h3>
+        <label>Blockquote</label>
+        <blockquote>
+            <q>If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.</q> - <b>James
+            Cameron</b>
+        </blockquote>
         <hr>
         <h2>
             Buttons
         </h2>
-        <a href="#" class="primary-button">
-            Primary button
-        </a>
-        <button class="primary-button" disabled>
-            Disabled primary button
-        </button>
+        <p>
+            Normal buttons, without any classes.
+        </p>
         <button>
             Normal button
         </button>
         <button disabled>
             Disabled
         </button>
+        <p>
+            Primary buttons with <code>.primary-button</code> class.
+        </p>
+        <button class="primary-button">
+            Primary no link
+        </button>
+        <button class="primary-button" disabled>
+            Disabled primary button
+        </button>
+        <p>
+            To turn an <code>a</code> element to a buton, use <code>.button</code> or <code>.primary-button</code> class.
+        </p>
+        <a href="" class="button">Normal button</a>
+        <a href="" class="primary-button">Primary button</a>
+        
         <hr>
         <h2>
             Pre and Code
@@ -112,7 +131,7 @@
             Embed and iFrame
         </h2>
         <p>
-            By default, embed and iframe should grow bigger than parent's width
+            By default, embed and iframe should not grow bigger than parent's width
         </p>
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Le5rbjQqxfM" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -121,6 +140,9 @@
         <h2>
             Table
         </h2>
+        <p>
+            Table will take full parent's width by default.
+        </p>
         <table>
             <tr>
                 <th>ID</th>
@@ -148,16 +170,49 @@
             Forms
         </h2>
         <p>
-            We're going with simple style and just works everywhere.
+            We're going with simple style and just works everywhere. If you want to adjust the size or grid, you can build your own.
         </p>
         <form action="">
-            <input type="password" placeholder="Enter you ID number">
+            <label for="pwd">Enter Password</label>
+            <input type="password" placeholder="Enter you ID number" id="pwd">
             <input type="submit" value="Check"> <br>
             <p>
-                and some more text
+                If you want to make full screen, use <code>.full</code> class, it also works with buttons.
             </p>
-            <textarea rows="5" placeholder="Text area"></textarea>
+            <label for="text">Long text here</label>
+            <textarea id="text" rows="5" placeholder="Text area" class="full"></textarea>
+            <select name="" id="" class="full">
+                <option value="">Optin 1</option>
+                <option value="">Option 2</option>
+            </select>
         </form>
+
+        <h2>
+            Some more useful classes
+        </h2>
+        <p>
+            <ul>
+                <li>
+                    <code>.full</code> to turn anything full 100% width.
+                </li>
+                <li>
+                    <code>.primary-color</code> to turn element to <span class="primary-color">primary color</span>, work best with texts.
+                </li>
+                <li>
+                    <code>.container</code> use with a Div, to create big white space on each side, just like this document.
+                </li>
+                <li>
+                    <code>.border</code> to add border to an element. It has rounded corners by default
+                </li>
+                <li>
+                    <code>.text-left</code> <code>.text-right</code> <code>.text-center</code> to align text.
+                </li>
+                <li>
+                    <code>.background</code> to add light background color to an element, works best on div.
+                </li>
+            </ul>
+            
+        </p>
         <footer>
             &copy; Copyright 2020, all right reserved
         </footer>

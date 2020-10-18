@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+
+$sans-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$mono-font: monospace;
+$primary-color: #0077ec;
+$text-color: #000000;
+$second-text-color: #555555;
+$background-color: #ffffff;
+$second-background-color: #f8f8f8;
+$border-color: #bdbdbd;
+$round-corner: 0.5em;
+$margin-bottom: 1em;
+
+@mixin button-style {
+  font-family: $sans-font;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: $round-corner;
+  white-space: nowrap;
+  font-size: 1em;
+  text-decoration: none;
+  letter-spacing: 0.1px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $text-color;
+  color: $background-color;
+}
+
+html,
+body {
+  font-family: $sans-font;
+  color: $text-color;
+  background: $background-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  width: 100%;
+  min-height: 100%;
+}
+
+p,
+pre,
+code,
+address,
+area,
+article,
+aside,
+audio,
+video,
+embed,
+details,
+figure,
+img,
+iframe,
+nav,
+ol,
+ul,
+li,
+option,
+table,
+section,
+main,
+textarea,
+form,
+header {
+  margin-bottom: $margin-bottom;
+}
+
+code,
+kbd,
+pre {
+  font-family: $mono-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  color: $text-color;
+  letter-spacing: -0.04em;
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1.1em;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+header {
+  border-bottom: 1px solid $border-color;
+  display: block;
+  padding: 1em 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+hr {
+  width: 100%;
+  color: $border-color;
+  opacity: 0.5;
+  margin: 2em 0;
+}
+
+code {
+  background: $second-background-color;
+  border: 0.5px solid $border-color;
+  border-radius: $round-corner;
+  padding: 0.25em;
+  font-size: 1em;
+  font-weight: 400;
+  color: $text-color;
+}
+
+pre {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 1em;
+  border-top: 1em solid $border-color;
+  background: $second-background-color;
+  color: $text-color;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  word-break: break-all;
+}
+
+details > {
+  summary {
+    color: var(--text-color);
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+ol,
+ul {
+  margin-left: 0;
+}
+
+img,
+video,
+table,
+figure {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+embed,
+iframe {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+th,
+td {
+  border-bottom: 1px solid $border-color;
+}
+
+th {
+  font-weight: 400;
+  color: $second-text-color;
+  text-align: left;
+}
+
+td {
+  color: $text-color;
+}
+
+tr {
+  &:hover {
+    background: $second-background-color;
+  }
+}
+
+blockquote {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: $round-corner;
+  background: $second-background-color;
+  color: $text-color;
+  margin: 0 0 1em 0;
+  padding: 1em;
+
+  q {
+    font-style: italic;
+  }
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+select,
+textarea {
+  font-family: $sans-font;
+  font-weight: 400;
+  border-radius: $round-corner;
+  font-size: 1em;
+  background: transparent;
+  color: $text-color;
+  border: 0.5px solid $border-color;
+  padding: 8px 16px;
+  outline: none;
+
+  &:focus {
+    border: 0.5px solid $primary-color;
+  }
+}
+
+button,
+a.button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background: transparent;
+  color: $text-color;
+  border: 0.5px solid $border-color;
+  @include button-style();
+
+  &:hover {
+    background: $second-background-color;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $border-color;
+    border: 0.5px solid $second-background-color;
+    cursor: default;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+button.primary-button,
+a.primary-button {
+  background: $primary-color;
+  color: $background-color;
+  border: 0.5px solid transparent;
+  @include button-style();
+
+  &:hover {
+    background: darken($primary-color, 10%);
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    background: darken($primary-color, 5%);
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:disabled {
+    background: lighten($primary-color, 30%);
+    cursor: default;
+  }
+}
+
+footer {
+  border-top: 1px solid $border-color;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding: 1em 0;
+  margin-top: 1em;
+}
+
+/*
+    Utilities for marking up page
+*/
+.container {
+  width: 50vw;
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.full {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border {
+  border: 1px solid $border-color;
+  border-radius: $round-corner;
+}
+
+.background {
+  background: $second-background-color;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+/*
+    Break point.
+    For tablet: 1024px;
+    For mobile: 640px;
+*/
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 100vw;
+  }
+}
